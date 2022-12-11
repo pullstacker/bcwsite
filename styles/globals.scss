@@ -1,0 +1,431 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&family=Ubuntu:wght@300;400;500;700&display=swap");
+
+@layer components {
+  * {
+    font-family: "Ubuntu", sans-serif;
+  }
+
+  .text-sl {
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .text-sr {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .text-sm {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .text-ml {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.0005em;
+  }
+
+  .text-mr {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.0005em;
+  }
+
+  .text-mm {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: -0.0005em;
+  }
+
+  .text-btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.006em;
+  }
+
+  .text-btnl {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: -0.006em;
+  }
+
+  .text-lr {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.011em;
+  }
+
+  .text-lm {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: -0.011em;
+  }
+
+  .heading-sl {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.017em;
+  }
+
+  .heading-sr {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.017em;
+  }
+
+  .heading-sm {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: -0.017em;
+  }
+
+  .heading-m {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.0005em;
+  }
+
+  .heading-ll {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    letter-spacing: -0.022em;
+  }
+
+  .heading-x {
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+
+  .heading-xl {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 44px;
+  }
+
+  .heading-xxl {
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 74px;
+    letter-spacing: 0.04em;
+  }
+
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus {
+    outline: none;
+  }
+
+  input {
+    width: 100%;
+    height: 40px;
+    background: transparent;
+    border-bottom: 1px solid #dddddd;
+    font-size: 16px;
+    padding-bottom: 4px;
+    font-weight: 300;
+  }
+
+  input::placeholder {
+    color: rgba(26, 24, 24, 0.75);
+  }
+
+  .button {
+    background: #c2a486;
+    // border-radius: 12px;
+    color: white;
+    cursor: poOpenSans;
+    padding: unset;
+    height: 52px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    // &.deselected {
+    //   background: #f5f5f5;
+    //   color: #303030;
+    // }
+
+    // &.selected {
+    //   background: #edd6d9;
+    //   color: #d704a8;
+    // }
+
+    // &.select {
+    //   background: #fff;
+    //   color: #d704a8;
+    // }
+
+    // &.approvalblue {
+    //   background: white;
+    //   border: 1px solid #496ee9;
+    //   color: #496ee9;
+    //   width: 145px;
+    // }
+  }
+
+  .button:hover {
+    background: #c2a486;
+    cursor: pointer;
+    // &.deselected,
+    // &.selected {
+    //   background: #edd6d9;
+    //   color: #d704a8;
+    // }
+
+    // &.select {
+    //   color: #fff;
+    //   background: linear-gradient(180deg, #d16677 0%, #c73c53 100%) !important;
+    // }
+
+    // &.approvalblue {
+    //   background: #496ee9;
+    //   color: #fff;
+    // }
+  }
+
+  .button-transparent {
+    @extend .button;
+    background: transparent;
+    border: 1px solid #c2a486;
+  }
+
+  .button-transparent:hover {
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .button-secondary {
+    left: 1229px;
+    top: 170px;
+    background: #25316c;
+    border-radius: 3.2px;
+    color: white;
+    cursor: poOpenSans;
+
+    &.deselected {
+      background: #f5f5f5;
+      color: #303030;
+    }
+
+    &.selected {
+      background: #edd6d9;
+      color: #25316c;
+    }
+
+    &.select {
+      background: #fff;
+      color: #25316c;
+    }
+
+    // &.approvalblue {
+    //   background: white;
+    //   border: 1px solid #496ee9;
+    //   color: #496ee9;
+    //   width: 145px;
+    // }
+  }
+
+  .button-secondary:hover {
+    background: #25316c;
+
+    &.deselected,
+    &.selected {
+      background: #edd6d9;
+      color: #d704a8;
+    }
+
+    &.select {
+      color: #fff;
+      background: #25316c !important;
+    }
+
+    // &.approvalblue {
+    //   background: #496ee9;
+    //   color: #fff;
+    // }
+  }
+
+  .button-secondary-transparent {
+    @extend .button-secondary;
+    background: transparent;
+    border: 1px solid #25316c;
+  }
+
+  .button-secondary-transparent:hover {
+    background: transparent;
+  }
+
+  // a {
+  //   @apply text-primary;
+  // }
+
+  // a:hover {
+  //   @apply text-primary-hover;
+  // }
+
+  .bg-menu {
+    background: white;
+  }
+
+  .box1 {
+    border: 1px solid #e7e7e7;
+    filter: drop-shadow(0px 4px 13px rgba(0, 0, 0, 0.25));
+    border-radius: 4px;
+  }
+
+  .box-card {
+    box-shadow: 0px 4px 20px 2px rgba(0, 0, 0, 0.08);
+    border: 1px solid white;
+  }
+
+  .animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
+
+  .animated.faster {
+    -webkit-animation-duration: 100ms;
+    animation-duration: 100ms;
+  }
+
+  .fadeIn {
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+  }
+
+  .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  .loader {
+    border: 3px solid #edd6d9;
+    border-radius: 50%;
+    border-top: 3px solid #c2a486;
+    width: 30px;
+    height: 30px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+    margin: 10px auto;
+  }
+
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .pagination-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .datepicker input {
+    width: 130px;
+  }
+
+  .header-float {
+    @media (min-width: 1024px) {
+      position: fixed;
+      width: calc(100% - 314px);
+      z-index: 2;
+      background: white;
+    }
+  }
+
+  .bg-home-present {
+    background-image: url("/bg-started.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .btn-gradient {
+    background: linear-gradient(
+      247.71deg,
+      #dbb086 35.46%,
+      #a87e53 63.53%,
+      #ab7947 93.41%
+    );
+  }
+}
+
+// .dashboardBtn {
+//   border: 1px solid #d704a8;
+//   color: #d704a8;
+//   background-color: white;
+// }
+
+// .table {
+//   display: flex;
+//   flex-direction: column;
+// }
+
+// .table > div {
+//   padding: 17px 20px;
+// }
+
+// .sc > div {
+//   height: calc(50vh - 100px);
+//   width: auto;
+//   margin: 0 auto; /* it centers any block level element */
+// }
+
+// .table > div:nth-child(even) {
+//   background: #f4f4f4;
+//   background-color: rgb(231, 231, 231);
+// }
